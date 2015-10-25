@@ -1,11 +1,288 @@
 <html>
+  <!DOCTYPE html>
+<html>
   <head>
-    <title>Tutoring</title>
+    <title>WorkOut Tracker Screen 2</title>
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab|Stoke|Open+Sans+Condensed:300|Khula' rel='stylesheet' type='text/css'>
+    <style>
+     
+      body
+       {
+      	  background-color: #afeeee;}
+     header { 
+     	background-color: #2c2f32;
+     	padding: 7px 0px 0px 20px; 
+     	font-size: 30px;
+     	font-family: 'Stoke';
+     	font-style: oblique;
+     	font-weight: lighter; 
+     	position: relative; 
+     	text-align: center;
+     	color: #ffdab9;}
+      nav
+      {
+        font-size: 15px;
+        color: #2c2f32;
+        font-size: 20px;
+        font-family: 'Khula';
+        background-color:#ffdab9 
+      }
+      p {
+      	margin-top: 10px;
+      	box-shadow: #ffdab9;
+     	background-color: #2c2f32;
+     	color: #ffdab9;
+		font-size: 15px;
+		font-family: 'Khula';
+     
+
+     }
+
+     table { border-width: 2px;
+              background-color: white;
+              border: 6px solid white;
+              background-color: #afeeee;
+              padding: 10px;
+              margin: 45px;
+              }
+      tr { 
+        border: 1px solid black;}
+      td {
+        border: 1px solid black;
+        font-size: 18px;
+      font-family: 'Stoke';
+      background-color: white;
+      text-align: center;
+      }
+      th.summary {
+        background-color: #4169e1; 
+        border: 1px solid black;
+        font-size: 20px;
+        font-family: 'Stoke';}
+
+      th.WO {
+        background-color: #66ff66;
+        border: 1px solid black;
+        font-size: 20px;
+        font-family: 'Stoke';
+      }
+      th.time {
+        background-color: #ffff00;
+        border: 1px solid black;
+        font-size: 20px;
+        font-family: 'Stoke';
+      }
+      th.pace {
+        background-color: #33ccff;
+        border: 1px solid black;
+        font-size: 20px;
+        font-family: 'Stoke';
+      }
+      th.distance {
+        background-color:#778899;
+        border: 1px solid black;
+        font-size: 20px;
+        font-family: 'Stoke';
+        font: white;
+      }
+      th {
+      border: 1px solid black;
+      font-size: 20px;
+      font-family: 'Stoke';
+      background-color: #ffb6c1;}
+
+      h2 { 
+      	font-size: 24px; 
+      	font-family: 'Josefin Slab', sans-serif;
+      	margin-bottom: 0px;}
+      h3 { 
+      	margin-top: 5px;
+      	margin-bottom: 2px;
+      	border-bottom: 0px;
+      	background-color: #708090;
+      	font-size: 24px; 
+      	font-family: 'Open Sans Condensed', sans-serif;}
+        td:hover {
+          background-color: #e6e6fa;
+        font-style: i
+        }
+        fieldset {
+          background-color: #afeeee;
+          color: #2c2f32;
+          font-family:'Stoke';
+          font-size: 25px;
+        }
+        nav { display: inline;}
+      
+    </style>
   </head>
-
   <body>
-    Tutoring on Capitol Hill
+  	<header>
+  	  
+  	    <a href="longdivision.html">Long Division</a>
+  	    
+  	The Program - Goals and Targets
 
-    <a href="longdivision.html">Long Division</a>
+  		<p> Track Your Workouts & Stay Motivated<p>
+  		
+  		<div class='row'>
+        <div class='col-md-4'>
+  		<nav> WorkOuts</nav>
+    </div>
+    </div class='col-md-4'>
+      <nav> Food</nav>
+    </div>
+    <div class='col-md-4'>
+      <nav> Sleep</nav>
+   </div>
+</div>
+    </header>
+   <div class='container'>
+      <div class='col-md-4'>
+    <div id="form" class="Test"
+      <div class="title">
+    
+      </div>
+      </div>
+      <div class='col-md-12'>
+      <div class="subtitle">
+        <p>Create Your Program</p>
+      </div>
+    </div>
+  </div>
+  <div class='row'>
+  <div class='col-md-4'>
+      <form id="callus" target="_self" onsubmit="" action="javascript: postContactToGoogle()">
+        <fieldset>
+          <label for="name">How Many Times per Week Do You Plan to Workout?</label>
+          <input id="name" type="text" name="name">
+        </fieldset>
+      </div>
+      <div class='col-md-4'>
+        <fieldset>
+          <label for="email">How Many Weeks Do You Want Your Program to Be?
+          </label>
+          <input id="email" type="text" name="email">
+        </fieldset>
+      </div>
+      <div class='col-md-4'>
+        <fieldset>
+          <label for="feed">What Is Your Main Goal At The End Of The Program?</label>
+          <textarea id="feed" name="feed"></textarea>
+        </fieldset>
+      </div>
+    </div>
+        <div style="text-align: right; padding-bottom: 15px;">
+        <div style="width: 100%; display: block; float: right;">
+          <button id="send" type="submit">
+            I Am Ready To Sweat!
+          </button>
+        </div>
+        <div style="width: 100%; display: block; float: right; padding-top: 15px;">
+          <div class="requestSubmited" style="display:none; text-align: center;">Your request has been sent!</div>
+        </div>
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type='text/javascript' src='survey.js'></script>
+   <div class='col-md-12'>
+    <table>
+      <thead>
+        <tr>
+          <th>Week 4</th>
+        </tr>
+      </thead>
+      <tr>
+        <th class="WO">Select Workout Days</th>
+        <td>Monday</td>
+        <td>Tuesday</td>
+        <td>Wednesday</td>
+        <td>Thursday</td>
+        <td>Friday</td>
+        <td>Saturday</td>
+        <td>Sunday</td>
+        <th class="summary">Summary</th>
+      </tr>
+      <tr>
+        <th class="pace">Pace</th>
+        <td></td>
+        <td>9 min/mile</td>
+        <td></td>
+        <td>9 min/mile</td>
+        <td>9 min/mile</td>
+        <td></td>
+        <td>9 min/mile</td>
+        <td rowspan="3">20 miles</td>
+      </tr>
+      <tr>
+        <th class="time">Time</th>
+        <td></td>
+        <td>50 minutes</td>
+        <td></td>
+        <td>50 minutes</td>
+        <td>90 minutes</td>
+        <td></td>
+        <td>50 minutes</td>
+      </tr>
+      <tr>
+        <th class="distance">Distance</th>
+        <td></td>
+        <td>5 miles</td>
+        <td></td>
+        <td>5 miles</td>
+        <td>5 miles</td>
+        <td></td>
+        <td>5 miles</td>
+      </tr> 
+    </table>
+</div>
+      <div class='col-md-12'>
+      <div class="subtitle">
+        <p>Track My Sweat</p>
+      </div>
+    </div>
+  </div>
+  <div class='row'>
+  <div class='col-md-4'>
+      <form id="callus" target="_self" onsubmit="" action="javascript: postContactToGoogle()">
+        <fieldset>
+          <label for="name"> I worked out !</label>
+          <input id="name" type="text" name="name">
+        </fieldset>
+      </div>
+      <div class='col-md-4'>
+        <fieldset>
+          <label for="email">How many miles did you run? 
+          </label>
+          <input id="email" type="text" name="email">
+        </fieldset>
+      </div>
+      <div class='col-md-4'>
+        <fieldset>
+          <label for="feed">How was your workout? What could you do better next time?</label>
+          <textarea id="feed" name="feed"></textarea>
+        </fieldset>
+      </div>
+    </div>
+        <div style="text-align: right; padding-bottom: 15px;">
+        <div style="width: 100%; display: block; float: right;">
+          <button id="send" type="submit">
+            Track My Blood Sweat &amp; Tears
+          </button>
+        </div>
+        <div style="width: 100%; display: block; float: right; padding-top: 15px;">
+          <div class="requestSubmited" style="display:none; text-align: center;">Your request has been sent!</div>
+        </div>
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type='text/javascript' src='survey.js'></script>
+   <div class='col-md-12'>
+     
+  </body>
+</html>
+
+  
   </body>
 </html>
