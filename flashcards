@@ -1,0 +1,202 @@
+<DocType html>
+	<html>
+	<head>
+
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<title> memory game</title>
+		<style>
+			body {
+				background: yellow;
+			}
+			header {
+				height: 100px;
+				width:1100px;
+				font-size: 60px;
+				font-family: century;
+				text-align: center;
+			}
+			div {
+				height: 100px;
+				width: 100px;
+				background-color: #5882FA; 
+				color: white;
+				font-size: 20px;
+				font-family: helvetica; 
+				text-align: center;
+				border: 5px solid green;
+				float: left;
+			}
+			div.defbody {
+				width: 650px;
+				height: 850px;
+				background-color: black;
+			}
+			div.questionBank {
+				width: 220px;
+
+				height: 820px;
+				border: 20px solid green;
+			}
+			div.wbwindow{
+				width: 200px;
+				height: 800px;
+
+			}
+			div.qcard {
+				float: none;
+				margin: 0 auto;
+				margin-top: 20px; 
+				margin-bottom: 20px;
+				border: 5px solid yellow;
+				vertical-align: text-bottom;
+				
+			}
+			div.dcard {
+				margin: 10px;
+
+			}
+			div.clear {
+				clear: both;
+			}
+			div.dcard:hover {
+				background-color: #0B2161;
+        
+			}
+
+		</style> 
+	</head>
+	<body> 
+		<header>
+			Memory Game
+		</header>
+	
+		<div class="questionBank"> window
+		
+			<div class="qcard">
+				<br/>
+				<br/>
+				<br/>
+				<span></span>
+			</div>
+			<div class="qcard">
+				<br/>
+				<br/>
+				<br/>
+				<span></span>
+			</div>
+			<div class="qcard">
+				<br/>
+				<br/>
+				<br/>
+				<span></span>
+			</div>
+			<div class="qcard">
+				<br/>
+				<br/>
+				<br/>				
+				<span></span>
+			</div>
+		</div>
+
+		<div class="defbody">
+
+			<div class="dcard">1 <br/><br/><br/><span>HSing</span></div>
+		    <div class="dcard">2<br/><br/><br/><span>HSing</span></div>
+		    <div class="dcard">3<br/><br/><br/><span>Hello</span></div>
+		    <div class="dcard">4<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">5<br/><br/><br/><span>>H</span></div>
+		    <div class="dcard clear">6<br/><br/><br/><span>H</span></div>
+		    <div class="dcard"> 7<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">8<br/><br/><br/><span><H</span></div>
+		    <div class="dcard">9<br/><br/><br/><span>H</span></div>
+		    <div class="dcard"> 10<br/><br/><br/><span>H</span></div>
+		    <div class="dcard clear">11<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">12<br/><br/><br/><span>H</span></div>
+		    <div class="dcard"> 13<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">14<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">15<br/><br/><br/><span>H</span></div>
+		    <div class="dcard clear">16<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">17<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">18<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">19<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">20<br/><br/><br/><span>H</span></div>
+		    <div class="dcard clear">21<br/><br/><br/><span>H</span></div> 
+		    <div class="dcard">22<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">23<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">24<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">25<br/><br/><br/><span>H</span></div>
+	</body>
+
+	<script>
+	  var rangeRandom = function(n) {
+	  	return Math.floor(Math.random() * n);
+	  };
+
+	  jQuery(document).ready(function() {
+	  	var qcards = jQuery("div.qcard span");
+
+        for (var i = 0; i < qcards.length; i++) {
+        	var randomIndex = rangeRandom(questionBank.length);
+        	var randomWord = questionBank[randomIndex];
+        	questionBank.splice(randomIndex, 1);
+		    jQuery(qcards[i]).html(randomWord).data('question', randomWord);
+        }
+
+	  	var dcards = jQuery("div.dcard span");
+
+        for (var i = 0; i < dcards.length; i++) {
+		    jQuery(dcards[i]).html(definitionBank[i]).data('id', i).data('definition', referenceBank[i]);
+        }
+
+//code var definitionBank = ["Hello", "Bye", "Mother", "Father","Son","Dog", "Cat", "Bunny", "Fish", "Girl", "Dance", "Sing", "Cook", "Read", "Write", "Run", "Walk", "Love", "Learn", "Laugh", "Eat", "Boy", "Man", "Brother", "Sister"];
+
+		jQuery("div.dcard span").on('click', function() {
+			console.log(this);
+			console.log(jQuery(this).data());
+			
+
+			var definition = jQuery(this).data('definition');
+			var question = jQuery('div.qcard:first-child span').data('question');
+			console.log('definition is' + definition);
+			console.log('question data is ');
+			console.log(jQuery('div.qcard:first-child span').data());
+			console.log('question is' + question);
+			if (definition == question) {
+				jQuery(this).hide();
+				jQuery("div.dcard span").css('color', 'white' );
+				jQuery('div.qcard:first-child').remove();
+
+				if (questionBank.length >= 0) {
+
+					var randomIndex = rangeRandom(questionBank.length);
+					var randomWord = questionBank[randomIndex];
+					questionBank.splice(randomIndex, 1);
+
+
+					var domElement = jQuery('<div class="qcard">' +
+					'<br/>' +
+					'<br/>' +
+					'<br/>' +				
+					'<span>' + randomWord + '</span>' +	'</div>');
+					domElement.find('span').data('question', randomWord);
+
+					jQuery('div.questionBank').append(domElement);
+				}
+			} else { 
+				jQuery(this).css('color','red');
+
+			}
+
+		})
+
+	  });
+
+	  var definitionBank = ["Bonjour", "Au voire", "Mere", "Pere","Fils","Chienne", "Chat", "Lapin", "Pouison", "Nina", "Dancer", "Chanter", "Cuisine", "Lire", "Ecriver", "Courer", "Marcher", "Aimer", "Apprendre", "Rire", "Manger", "Garcon", "Homme", "Frere", "Soure"];
+
+	  var referenceBank = ["Hello", "Bye", "Mom", "Dad","Boy","Dog", "Cat", "Bunny", "Fish", "Girl", "Dance", "Sing", "Cook", "Read", "Write", "Run", "Walk", "Like", "Learn", "Laugh", "Eat", "Boy", "Man", "Brother", "Sister"];
+
+	  // Clone the referenceBank to the questionBank
+	  var questionBank = referenceBank.slice(0);
+
+  </script>
+</html> 
