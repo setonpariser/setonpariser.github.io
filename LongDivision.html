@@ -1,0 +1,194 @@
+<doctype html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<style>
+	body {
+		background-color: #B5E6FF;
+	}
+	input {
+		border: 1px solid black;
+		width: 90px;
+		height: 155px;
+		margin-right: 30px;
+		font-size: 10em;
+		font-family: courier;
+		float: left;
+		color: #0A141A;
+
+	} 
+	input.divisor
+		{float: left;
+			border: none;
+			color: #0A141A;
+			background-color: #B5E6FF;
+		}
+	div.Answer
+	{
+		margin-bottom: .1em;
+
+	}
+	div.body
+	 {	
+	 	margin-top: 200px;
+	 	margin-left: 200px;
+	 	clear: both;
+	 }
+	div.backgroundDivisor {
+
+			height: 200px;
+			width: 400px;
+			border-left: 6px solid black;
+			border-top: 6px solid black;
+	
+			font-size: 10em;
+			font-family: courier;
+			float: left;
+			color: #0A141A;
+			 
+			}
+	div.long 
+		{
+			clear: both;
+		}
+	input[name=q1] {
+		margin-left: 135px;
+		color: #0A141A;
+		
+	}
+	input[class=q0] {
+		margin-right: 1px;
+		color: #0A141A;
+
+	}
+	input[name=q5] {
+		margin-left: 1px;
+		color: #0A141A;
+	}
+	div.footer
+	{ clear: both;
+	 	margin-top: 300px;
+	 	margin-bottom: 300px;
+	 	color: #0A141A;	
+	}
+	
+	input.iGiveUp
+	{background-color: #FE642E;
+		font-size: 20px;
+		height: 60px;
+		width: 120px;
+		float: left;
+		color: #0A141A;
+		}
+	input.next
+	{ 
+		font-size: 20px;
+		height: 60px;
+		width: 120px;
+		float: left;
+		margin-left: 400px;
+		background-color: #00FF40;
+		color: #0A141A;}
+
+	div.decimal
+	{
+		font-size: 10em;
+		float: left;
+	}
+	</style>
+</head>
+<body>
+
+	<div class="body">
+		<div class="Answer">
+		  <div class="empty"> </div>
+		  <input type="text" class="q0" name="q1">
+		  <input type="text" class="q0" name="q2" disabled="true">
+		  <input type="text" class="q0" name="q3" disabled="true">
+		  <input type="text" class="q0" name="q4" disabled="true">
+		  <div class="decimal">.</div>
+		  <input type="text" class="q0" name="q5" disabled="true">
+		  <input type="text" class="q0" name="q6" disabled="true">
+		  <input type="text" class="q0" name="q7" disabled="true">
+
+		</div>
+		<div class="long">
+		  <input type="text" name="divisor" value="7" class="divisor">
+		  <div class="backgroundDivisor">3450</div>
+		</div>
+	
+		<div class="footer">
+	  	  <input type="button" class="iGiveUp" value="I Give Up">
+	   <input type="button" class="next" value="Next">
+		</div>
+		<script>
+		var divisor=7
+		var dividend=3450
+		var n = dividend/divisor
+		
+		var Answer= String("000" +(n.toFixed(4)))
+		Answer=Answer.substr(Answer.length-9)
+
+		$("[name=q1]").change(function() 
+		{
+			if (this.value == Answer[0]){
+
+				$("[name=q2]").prop("disabled",false)
+				$("[name=q2]").focus()	
+				console.log ("unlockq2")
+			}
+		})
+
+		$("[name=q2]").change(function() 
+		{
+			if (this.value == Answer[1]){
+
+				$("[name=q3]").prop("disabled",false)	
+				$("[name=q3]").focus()
+				console.log ("unlockq3")
+			}
+		})
+			$("[name=q3]").change(function() 
+		{
+			if (this.value == Answer[2]){
+
+				$("[name=q4]").prop("disabled",false)
+				$("[name=q4]").focus()
+
+				console.log ("unlockq4")
+			}
+		})
+			$("[name=q4]").change(function() 
+		{
+			if (this.value == Answer[3]){
+
+				$("[name=q5]").prop("disabled",false)
+				$("[name=q5]").focus()
+
+				console.log ("unlockq5")
+			}
+		})
+			$("[name=q5]").change(function() 
+		{
+			if (this.value == Answer[5]){
+
+				$("[name=q6]").prop("disabled",false)
+				$("[name=q6]").focus()
+
+				console.log ("unlockq6")
+			}
+		})
+			$("[name=q6]").change(function() 
+		{
+			if (this.value == Answer[6]){
+
+				$("[name=q7]").prop("disabled",false)
+				$("[name=q7]").focus()
+
+				console.log ("done")
+			}
+		})
+		</script>
+	</div>
+</body>
+</html>
