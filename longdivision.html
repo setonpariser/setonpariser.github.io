@@ -166,111 +166,17 @@
           <div class="nav"></div>
           <div class="nav"></div>
           <div class="nav"></div>
-          <div class="nav"></div>
-          <div class="nav"></div>
         </div>
         <div class="line">
         </div>
       <ul style="clear:both;">
-        <li><a href="games.html">Games</a></li>
-        <li><a href="math.html">Math</a></li>
-        <li><a href="science.html">Science</a></li>
-        <li><a href="flashcards.html">Flash Cards</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="parentscorner">Parents' Corner</a></li>
+        <li><a href="main.html">Games</a></li>
+        <li><a href="services.html">Math</a></li>
+        <li><a href="aboutme.html">Science</a></li>
+        <li><a href="contactus.html">Flash Cards</a></li>
+        <li><a href="resources.html">About Us</a></li>
       </ul>
      </header>
-	<div class="body">
-		<div class="Answer">
-		  <div class="empty"> </div>
-		  <input type="text" class="q0" name="q1">
-		  <input type="text" class="q0" name="q2" disabled="true">
-		  <input type="text" class="q0" name="q3" disabled="true">
-		  <input type="text" class="q0" name="q4" disabled="true">
-		  <div class="decimal">.</div>
-		  <input type="text" class="q0" name="q5" disabled="true">
-		  <input type="text" class="q0" name="q6" disabled="true">
-		  <input type="text" class="q0" name="q7" disabled="true">
 
-		</div>
-		<div class="long">
-		  <input type="text" name="divisor" value="7" class="divisor">
-		  <div class="backgroundDivisor">3450</div>
-		</div>
-	
-		<div class="footer">
-	  	  <input type="button" class="iGiveUp" value="I Give Up">
-	   <input type="button" class="next" value="Next">
-		</div>
-		<script>
-		var divisor=7
-		var dividend=3450
-		var n = dividend/divisor
-		
-		var Answer= String("000" +(n.toFixed(4)))
-		Answer=Answer.substr(Answer.length-9)
-
-		$("[name=q1]").change(function() 
-		{
-			if (this.value == Answer[0]){
-
-				$("[name=q2]").prop("disabled",false)
-				$("[name=q2]").focus()	
-				console.log ("unlockq2")
-			}
-		})
-
-		$("[name=q2]").change(function() 
-		{
-			if (this.value == Answer[1]){
-
-				$("[name=q3]").prop("disabled",false)	
-				$("[name=q3]").focus()
-				console.log ("unlockq3")
-			}
-		})
-			$("[name=q3]").change(function() 
-		{
-			if (this.value == Answer[2]){
-
-				$("[name=q4]").prop("disabled",false)
-				$("[name=q4]").focus()
-
-				console.log ("unlockq4")
-			}
-		})
-			$("[name=q4]").change(function() 
-		{
-			if (this.value == Answer[3]){
-
-				$("[name=q5]").prop("disabled",false)
-				$("[name=q5]").focus()
-
-				console.log ("unlockq5")
-			}
-		})
-			$("[name=q5]").change(function() 
-		{
-			if (this.value == Answer[5]){
-
-				$("[name=q6]").prop("disabled",false)
-				$("[name=q6]").focus()
-
-				console.log ("unlockq6")
-			}
-		})
-			$("[name=q6]").change(function() 
-		{
-			if (this.value == Answer[6]){
-
-				$("[name=q7]").prop("disabled",false)
-				$("[name=q7]").focus()
-
-				console.log ("done")
-			}
-		})
-		</script>
-	</div>
 </body>
 </html>
