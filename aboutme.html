@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tutoring</title>
+    <title>Navigation</title>
   
     <style>
      
@@ -10,19 +10,21 @@
       	  background-color: white;}
      header { 
      	background-color: black;
-     	padding: 7px 0px 0px 20px; 
+     	padding: 7px 0px 0px 0px; 
      	font-size: 70px;
      	font-family: 'Helvetica';
-     	font-weight: lighter; 
+     	font-weight: light; 
      	position: relative; 
      	text-align: center;
-     	color: #93CFFC;}
+     	color: #93CFFC;
+     	margin-top: 0px;
+     }
       nav
       {
-        font-size: 60px;
+        font-size: 35px;
         color: #2c2f32;
         font-family: 'Helvetica';
-        background-color:#ffdab9 
+        background-color:#ffdab9; 
       }
       h3 {
       	margin-top: 10px;
@@ -32,7 +34,6 @@
 		font-size: 35px;
 		font-family: 'Khula';
      
-
      }
      a { color: #93CFFC;
           text-decoration: none;
@@ -44,7 +45,7 @@
       width:100%;
     }
     div.line {
-      border-bottom: 2px solid #93CFFC;
+      border-bottom: 4px solid #93cffc;
       clear:both;
     }
     div.nav 
@@ -57,8 +58,8 @@
       }
     ul{
       margin-top: 7px;
-      border-top: 2px solid #93CFFC;
-
+      margin-bottom: 20px;
+      height: 50px;
     }
      li {
       padding-top: 10px;
@@ -66,8 +67,45 @@
       margin-right: 20px;
       font-size: 30px;
      }
-     
-     div.footer {
+   div.hold { background-color: black;
+   		width: 100%;
+   		height: 60px;
+   }
+   p { margin-bottom: 10px; }
+   div.welcomeleft {
+   	border: 8px solid black;
+   	float: left;
+   	width: 40%;
+   	height: 620px;
+   	background-color: white;
+   	margin-left: 50px;
+   	margin-top: 20px;
+   }
+   div.welcomeright { 
+   	
+   	float: right;
+   	margin-right: 50px;
+   	width: 40%;
+   	height: 300px;
+   	background-color: white;
+   }
+   div.welcomer1 { 
+   	border: 8px solid black;
+   	background-color:white;
+   	height: 300px;
+   	width:400px;
+   	margin-top:10px;
+   }
+  div.welcomer2 {
+  	border: 8px solid black;
+  		border: 8px solid black;
+   	background-color:white;
+   	height: 300px;
+   	width:400px;
+   	margin-top: 20px;
+  }
+  
+  div.footer {
      	margin-top: 700px;
      	height: 200px;
      	width: 100%;
@@ -76,6 +114,7 @@
      }
      div.mot { margin-left: 600px;
      		margin-top: 50px;
+     		float:left;
      }
      div.motivation { 
      	width: 300px;
@@ -84,21 +123,29 @@
      	background-color: white;
      	display: inline;
      	margin-left: 150px;
+     	padding: 35px;
      }
-
      </style>
     <body>
      <header>
-       <p>Tutoring on Capitol Hill</p>
-        <div class="line">
-        </div>
-      <ul style="clear:both;">
+       <p>Welcome to Tutoring on Capitol Hill</p>
+        <ul style="clear:both;">
         <li><a href="main.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="resources.html">Resources</a></li>
       </ul>
+        <div class="line">
+        </div>
+        <div class="hold"></div>
      </header>
+     <div class="welcomeleft">
+      </div>
+      <div class="welcomeright">
+      <div class="welcomer1">
+      </div>
+      <div class="welcomer2"></div>
+      </div>
      <div class="footer">
      <div class="mot">
      <div class="motivation">Test 1</div>
