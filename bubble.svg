@@ -151,6 +151,17 @@
          x="343.28433"
          y="576.32812" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath28768">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2001998;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect28770"
+         width="30.414076"
+         height="22.221304"
+         x="342.74011"
+         y="574.46704" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -160,8 +171,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497476"
-     inkscape:cx="296.46848"
-     inkscape:cy="450.44872"
+     inkscape:cx="332.83397"
+     inkscape:cy="486.81421"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -194,8 +205,8 @@
      id="layer1">
     <g
        id="g36396"
-       transform="matrix(21.209826,0,0,23.897359,-7227.3856,-13195.581)"
-       clip-path="url(#clipPath28709)">
+       transform="matrix(24.046445,0,0,27.093411,-8235.62,-15105.879)"
+       clip-path="url(#clipPath28768)">
       <path
          sodipodi:nodetypes="cccccccssscccc"
          inkscape:connector-curvature="0"
@@ -209,5 +220,12 @@
          d="m 348.91262,582.09061 c 0.20716,-1.08002 0.24197,-2.46905 2.26786,-3.60715 3.10985,-0.38088 1.6655,1.12172 6.28571,-0.62499 1.84799,0.0922 6.86202,0.28162 8.76786,3.98213 3.35336,0.75542 4.36315,0.94183 5.03572,4.55358 -0.94124,1.58522 -1.46429,3.91071 -5.73215,4.19642 -2.73214,1.71429 -2.73214,3.71429 -5.73214,3.71429 -3.09693,0.13283 -8.00767,-0.1898 -8,-4 -4.50571,0.28564 -7,-1 -6.8,-5 0.8,-2 0.83602,-2.5666 3.90714,-3.21428 z"
          style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:5.11000013;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect28764"
+       width="755.59406"
+       height="602.0509"
+       x="0"
+       y="458.39252" />
   </g>
 </svg>
