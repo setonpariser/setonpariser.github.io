@@ -35,6 +35,12 @@
 		font-family: 'Khula';
      
      }
+     h4 {font-size: 12px; 
+          padding-bottom: 0px;
+          margin-bottom: 0px;
+          text-align: center;
+          color: #93CFFC;
+          }
      a { color: #93CFFC;
           text-decoration: none;
           }
@@ -57,8 +63,14 @@
         background-color: black;
       }
       div.testtube
-      {width:20%;
-      height: 70%;}
+      {
+
+      border: 8px solid black;
+      width:20%;
+      height: 530px;
+      float: left;
+      margin-left: 40px;
+      margin-top: 20px;}
     ul{
       margin-top: 7px;
       margin-bottom: 20px;
@@ -74,15 +86,20 @@
    		width: 100%;
    		height: 60px;
    }
+   h2 { font-size: 30px; 
+        color: #93CFFC;
+        font-family: "Helvetica";
+        text-align: center;}
    p { margin-bottom: 10px; }
-   div.welcomeleft {
+   div.chapters {
    	border: 8px solid black;
    	float: left;
-   	width: 40%;
-   	height: 620px;
+   	width: 12%;
+   	height: 530px;
    	background-color: white;
    	margin-left: 50px;
    	margin-top: 20px;
+    
    }
    div.welcomeright { 
    	
@@ -131,6 +148,24 @@
      	margin-left: 150px;
      	padding: 35px;
      }
+     div.periodicTable {   
+      border: 1px solid gray;
+      width: 100px;
+      margin-bottom: 10px;
+      margin-left: 3px;
+
+     }
+     div.periodicTable1 {   
+      
+      width: 100px;
+      margin-bottom: 10px;
+      margin-top: 30px;
+      margin-left: 3px;
+     }
+     div.periodicTable1:hover { background-color: black; color: white;}
+     div.periodicTable:hover
+      { background-color: black; color: white;}
+     
      </style>
     <body background="chemistrymain.svg">
      <header>
@@ -145,10 +180,19 @@
         </div>
         <div class="hold"></div>
      </header>
+     <div>
+     <div class="chapters">
+        <div class="periodicTable1"><h4>steriochemistry</h4><h2>F</h2></div>
+        <div class="periodicTable"><h2>Na</h2></div>
+        <div class="periodicTable"><h2>S</h2></div>
+        <div class="periodicTable"><h2>L</h2></div>
+        <div class="periodicTable"><h2>G</h2></div>
+      </div>
      <div class="testtube">
      <img src="bubble.svg">
    
      <img src="testtube.svg"/>
      </div>
+  </div>
   </body>
 </html>
